@@ -1,22 +1,23 @@
-import ReactIcon from "./assets/react.svg";
+import ReactIcon from "../assets/react.svg";
+import GlobeIcon from "../assets/globe.svg";
+import { Link } from "react-router-dom";
 
-const Hero = () => {
+const HeroPage = () => {
   return (
     <main className="bg-gradient-to-r from-slate-500 to-gray-950 min-h-screen flex flex-col items-center justify-center text-center text-white p-6">
-        
-      <div className="flex flex-roew items-center space-x-4">
+      <div className="flex flex-row items-center space-x-4">
         <div className="relative flex items-center justify-center">
           <img
             src={ReactIcon}
             className="h-40 w-40 text-blue-200 animate-spin-slow"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-[1.4rem]">🌐</p>
+            <img src={GlobeIcon} className="w-8 h-8" />
           </div>
         </div>
 
         <h1 className="text-[5.5rem] font-bold leading-tight">
-          Reactify News <span className="text-3xl gradient-text">🇮🇳</span>
+          Reactify News<span className="text-4xl gradient-text ml-2">🇮🇳</span>
         </h1>
       </div>
 
@@ -28,15 +29,16 @@ const Hero = () => {
           empowered, and engaged, every moment, wherever you are, bringing you
           unparalleled coverage and insights that truly matter.
         </p>
-        <a
-          href="#"
-          className="button button--telesto mt-8 inline-block px-40 py-3 bg-[#00d8ff] text-white hover:text-black rounded-md"
+        <Link
+          to="/news/general"
+          className="button button--telesto mt-8 inline-block px-48 py-3 bg-[#00d8ff] text-white hover:text-black rounded-md"
         >
           <span className="font-semibold text-base">Explore News</span>
-        </a>
+        </Link>
       </div>
     </main>
   );
 };
 
-export default Hero;
+export default HeroPage;
+
