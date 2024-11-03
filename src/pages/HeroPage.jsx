@@ -21,13 +21,9 @@ const HeroPage = () => {
         </h1>
       </div>
 
-      <div className="mt-8 max-w-[50rem] mx-auto py-6 px-10 bg-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg">
-        <p className="text-[1.2rem] font-light leading-relaxed">
-          Welcome to Reactify News – your gateway to the world's stories as they
-          happen, in real time! With a strong commitment to delivering accurate,
-          real-time, and reliable updates, Reactify News keeps you informed,
-          empowered, and engaged, every moment, wherever you are, bringing you
-          unparalleled coverage and insights that truly matter.
+      <div className="mt-8 max-w-[48rem] mx-auto py-6 px-8 bg-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg">
+        <p className="text-[1.2rem] font-thin leading-relaxed">
+        Welcome to Reactify News – your real-time gateway to global stories! Stay informed and empowered with accurate, reliable, and timely updates as events unfold. Reactify News brings you essential coverage and valuable insights that truly matter, wherever you are. Join us today and never miss a moment in the world’s unfolding stories!
         </p>
         <Link
           to="/news/general"
@@ -41,4 +37,3 @@ const HeroPage = () => {
 };
 
 export default HeroPage;
-

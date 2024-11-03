@@ -20,19 +20,23 @@ const Navbar = () => {
     <nav className="bg-gray-900 text-white py-4 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo section */}
-        <div className="flex items-center space-x-2">
-          <div className="relative flex items-center justify-center">
-            <img
-              src={ReactIcon}
-              className="h-12 w-12 text-blue-200 animate-spin-slow"
-              alt="React Icon"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img src={GlobeIcon} className="w-2 h-2" alt="Globe Icon" />
+        <Link to="/">
+          <div className="flex items-center space-x-2">
+            <div className="relative flex items-center justify-center">
+              <img
+                src={ReactIcon}
+                className="h-12 w-12 text-blue-200 animate-spin-slow"
+                alt="React Icon"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img src={GlobeIcon} className="w-2 h-2" alt="Globe Icon" />
+              </div>
             </div>
+            <span className="text-3xl font-bold text-gray-100">
+              Reactify News<span className="text-base gradient-text ml-1">🇮🇳</span>
+            </span>
           </div>
-          <span className="text-3xl font-bold text-gray-100">Reactify News</span>
-        </div>
+        </Link>
 
         {/* Categories for large screens */}
         <div className="hidden md:flex space-x-6">
@@ -91,6 +95,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
