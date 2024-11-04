@@ -8,7 +8,7 @@ const NewsArticles = ({ news }) => {
       {news.map((article, index) => (
         <div
           key={index}
-          className="bg-gray-900 flex flex-col lg:flex-row text-gray-200 p-12 rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
+          className="bg-gray-900 flex flex-col lg:flex-row text-gray-200 p-12 rounded-lg shadow-lg"
         >
           <img
             src={article.image}
