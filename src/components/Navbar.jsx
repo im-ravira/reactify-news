@@ -21,25 +21,25 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo section */}
         <Link to="/">
-          <div className="flex items-center space-x-2">
-            <div className="relative flex items-center justify-center">
+          <div className="flex items-center space-x-2 max-sm:mx-4 lg:ml-6">
+            <div className="relative flex items-center justify-center ">
               <img
                 src={ReactIcon}
-                className="h-12 w-12 text-blue-200 animate-spin-slow"
+                className="h-auto w-10 md:w-12 lg:w-14 text-blue-200 animate-spin-slow"
                 alt="React Icon"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <img src={GlobeIcon} className="w-2 h-2" alt="Globe Icon" />
+                <img src={GlobeIcon} className="w-[0.4rem] md:w-3 h-auto" alt="Globe Icon" />
               </div>
             </div>
-            <span className="text-3xl font-bold text-gray-100">
+            <span className="text-2xl md:text-3xl font-bold text-gray-100">
               Reactify News<span className="text-base gradient-text ml-1">🇮🇳</span>
             </span>
           </div>
         </Link>
 
         {/* Categories for large screens */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden lg:flex space-x-6 mr-6">
           {categories.map((category) => (
             <Link
               key={category}
@@ -52,13 +52,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="lg:hidden max-sm:mr-3">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-blue-300 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 md:w-10 h-auto"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ const Navbar = () => {
 
       {/* Mobile dropdown menu */}
       {isOpen && (
-        <div className="md:hidden mt-4 bg-gray-800 px-4 py-2 rounded-lg shadow-md">
+        <div className="lg:hidden mt-4 bg-gray-800 px-4 md:px-10 py-2 rounded-b-md shadow-md">
           {categories.map((category) => (
             <Link
               key={category}
